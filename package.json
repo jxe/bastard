@@ -1,0 +1,34 @@
+{
+  "name": "bastard",
+  "version": "0.1.0",
+  "description": "workflow programming for social networks",
+  "main": "index.jsx",
+  "dependencies": {
+    "firebase": "latest",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "babel-preset-es2015": "",
+    "babel-preset-react": "^6.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Edelman",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "react",
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

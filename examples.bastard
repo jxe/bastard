@@ -1,0 +1,51 @@
+"Have an event planned for you by someone else"
+
+ask some:dreamer ➔idea:
+  What sort of event should someone plan for you?
+charge some:planner:
+  Would you plan @idea for @dreamer?
+charge some:coplanner:
+  Would you coplan @idea with @planner?
+ask* dreamer, planner, coplanner ➔date:
+  Decide together--what's a good date for @idea?
+charge* everyone:
+  Can you attend @idea on @date, cohosted by @planner and @coplanner?
+
+----------
+
+"Plan a book club meeting"
+
+ask some:host ➔theme:
+  What's a theme for this month's book club?
+ask* everyone ➔suggestions:
+  What book would you suggest for the upcoming meeting with @theme?
+ask host ➔book(@suggestions):
+  Which book shall everyone read?
+ask host ➔date:
+  And when shall we meet?
+charge* everyone:
+  Read @book and come to the meeting on @date to discuss!
+
+----------
+
+"Post and collect comments"
+
+ask some:poster ➔post:
+  What's up?
+ask everyone ➔comments:
+  Comment on @post by @poster
+
+----------
+
+"Museum tour"
+
+charge some:impressionist:
+  Visit the VanGough
+charge some:modernist
+  Visit the Yves Klien
+charge impressionist:
+  Visit the Monet
+charge modernist:
+  Visit the Picasso
+charge* modernist & impressionist:
+  Find each other in the museum and talk about the different emotions of the eras you've seen
