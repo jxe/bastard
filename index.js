@@ -34,7 +34,9 @@ var Engine = function () {
     }
   }, {
     key: 'play',
-    value: function play(card, round, player, response) {
+    value: function play(card, round, player) {
+      var response = arguments.length <= 3 || arguments[3] === undefined ? true : arguments[3];
+
       var cardsToAdd = [],
           status = this.status(card, round, player.uid);
       var update = {};var fits = status.fits;
