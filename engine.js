@@ -5,7 +5,7 @@ export default class Engine {
   chat(c,m){ this.base.child(`rounds/${c.round}/chats/${c.no}`).push(m) }
   rounds(){ return (m,cb) => this.base[m]('value', cb) }
 
-  play(card, round, player, response){
+  play(card, round, player, response = true){
     let cardsToAdd = [], status = this.status(card, round, player.uid)
     let update = {}, {fits,done,notyet} = status
     if (!fits || done || notyet) return
